@@ -35,12 +35,12 @@ class SignUp extends React.Component {
 
       await createUserProfileDocument(user, { displayName });
 
-      this.state = {
+      this.setState({
         displayName: "",
         email: "",
         password: "",
         confirmPassword: ""
-      };
+      });
     } catch (error) {
       console.log(error);
     }
@@ -73,6 +73,7 @@ class SignUp extends React.Component {
             type="email"
             name="email"
             value={email}
+            required
           />
           <FormInput
             type="password"
@@ -89,7 +90,7 @@ class SignUp extends React.Component {
             value={confirmPassword}
             onChange={this.handleChange}
           />
-          <CustomButton type="submit">Sing Up</CustomButton>
+          <CustomButton type="submit">SIGN UP</CustomButton>
         </form>
       </div>
     );

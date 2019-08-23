@@ -26,18 +26,18 @@ class App extends React.Component {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
-        userRef.onSnapshot(async snapshot => {
+        userRef.onSnapshot(async snapShot => {
           this.setState({
             currentUser: {
-              id: snapshot.id,
-              ...snapshot.data()
+              id: snapShot.id,
+              ...snapShot.data()
             }
           });
+          console.log(this.state);
         });
       }
       // when the user is not signed in
       this.setState({ currentUser: userAuth });
-      console.log(this.state.currentUser);
     });
   }
 
