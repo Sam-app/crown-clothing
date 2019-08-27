@@ -13,7 +13,6 @@ import Header from "./components/header/header.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 import "./App.css";
-import SignIn from "./components/sign-in/sign-in.component";
 
 class App extends React.Component {
   // constructor() {
