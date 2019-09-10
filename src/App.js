@@ -6,14 +6,14 @@ import { createStructuredSelector } from "reselect";
 import { setCurrentUser } from "./redux/user/user.action";
 
 //pages
-import HomePage from "./components/pages/homepage/HomePage.componenet";
-import ShopPage from "./components/pages/shoppage/ShopPage.component";
+import HomePage from "./pages/homepage/HomePage.component";
+import ShopPage from "./pages/shoppage/ShopPage.component";
 import Header from "./components/header/header.component";
-import CheckoutPage from "./components/pages/checkout/checkout.component";
+import CheckoutPage from "./pages/checkout/checkout.component";
 //auth
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { selectCurrentUser } from "./redux/user/user.selector";
-import SignInAndSignUpPage from "./components/pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
+import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 
 import "./App.css";
 
