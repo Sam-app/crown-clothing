@@ -4,7 +4,7 @@ import { persistStore } from "redux-persist";
 
 import rootReducer from "./root-reducer";
 
-const middlewares = [logger];
+const middlewares = [];
 
 // use the logger only in development environment
 if (process.env.NODE_ENV === "development") {
