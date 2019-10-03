@@ -21,7 +21,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
-
   const snapshot = await userRef.get();
 
   if (!snapshot.exists) {
@@ -41,23 +40,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   }
 
   return userRef;
-};
-
-export const addShopCollectionsAndDocuments = async (
-  collectionKey,
-  objectToAdd
-) => {
-  const collectionRef = firestore.collection(collectionKey);
-
-  const batch = firestore.batch();
-
-  objectToAdd.forEach(obj => {
-    //create ned doc id
-    const newDocRef = collectionRef.doc();
-    batch.set(newDocRef, obj);
-  });
-
-  return await batch.commit();
 };
 
 // Google authintication

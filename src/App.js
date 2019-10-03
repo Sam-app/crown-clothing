@@ -14,7 +14,7 @@ import CheckoutPage from "./pages/checkout/checkout.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { selectCurrentUser } from "./redux/user/user.selector";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
-//import { selectCollectionsForPreview } from "./redux/shop/shop.selector";
+
 import "./App.css";
 
 class App extends React.Component {
@@ -44,14 +44,8 @@ class App extends React.Component {
         // console.log(this.state);
       }
       // when the user is not signed in
-      //  console.log(userAuth);
+      console.log(userAuth);
       setCurrentUser(userAuth);
-
-      //programmatically add shop data
-      // addShopCollectionsAndDocuments(
-      //   "collections",
-      //   collectionsArray.map(({ title, items }) => ({ title, items }))
-      // );
     });
   }
 
