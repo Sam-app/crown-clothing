@@ -60,7 +60,7 @@ export const addShopCollectionsAndDocuments = async (
   return await batch.commit();
 };
 
-// Google authintication
+// Google authentication
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
